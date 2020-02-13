@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onButtonClick(View view){
+    public void onTansakuButtonClick(View view){
         switch (view.getId()){
-            case R.id.btnToSecond:
+            case R.id.btnToTansaku:
                 Intent intent = new Intent(this, TansakuActivity.class);
                 startActivity(intent);
                 break;
