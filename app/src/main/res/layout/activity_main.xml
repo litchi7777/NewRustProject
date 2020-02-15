@@ -27,7 +27,7 @@
         android:onClick="onTansakuButtonClick"
         android:text="Go To TansakuActivity"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
 
