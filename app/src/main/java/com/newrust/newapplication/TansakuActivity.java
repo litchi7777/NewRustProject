@@ -11,4 +11,7 @@ public class TansakuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tansaku);
     }
 
+
+
+
 }
