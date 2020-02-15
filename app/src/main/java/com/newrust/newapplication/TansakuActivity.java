@@ -8,13 +8,13 @@ import android.widget.ImageView;
 public class TansakuActivity extends AppCompatActivity {
 
     public int left,top,right,bottom;
+    public String[] Case_array;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tansaku);
-        String case1 = getString(R.string.case1);
-
+        Case_array = getResources().getStringArray(R.array.case_array);
 
     }
 
@@ -47,6 +47,10 @@ public class TansakuActivity extends AppCompatActivity {
         return false;
     }
 
+    public void LoadImage(int num){
+
+        Integer.parseInt();
+    }
 
 
 
