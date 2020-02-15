@@ -1,9 +1,14 @@
 package com.newrust.newapplication;
 
+import android.app.Activity;
+import android.graphics.Point;
+import android.graphics.Rect;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Display;
 import android.view.MotionEvent;
+import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +21,7 @@ public class TansakuActivity extends AppCompatActivity {
     public int obj1_1;
     public int obj1_id;
     public TextView chat;
+    public int display_size;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +40,18 @@ public class TansakuActivity extends AppCompatActivity {
                 // something to do
                 break;
             case MotionEvent.ACTION_UP:
+                float density = 1;
                 ImageView po = currentView;
-                int poleft = po.getLeft();
-                int potop = po.getTop();
-                int x= (int) motionEvent.getX();
-                int y= (int) motionEvent.getY();
-                int percentX = (x-poleft)*100/po.getWidth();
-                int percentY = (y-potop)*100/po.getHeight();
-                Log.d("tansaku", "x:"+ String.valueOf(poleft)+" y:"+String.valueOf(potop));
+                int poleft = (int)(po.getX()/density);
+                int potop = (int)(po.getY()/density);
+                int x= (int) (motionEvent.getX()/density);
+                int y= (int) (motionEvent.getY()/density)-(display_size-findViewById(R.id.tansaku).getBottom());
+                int width = (int)(po.getWidth()/density);
+                int height = (int) (po.getHeight()/density);
+                int percentX = (x-poleft)*100/width;
+                int percentY = (y-potop)*100/height;
+
+                Log.d("tansaku", "x:"+ String.valueOf(findViewById(R.id.tansaku).getBottom())+" y:"+String.valueOf(potop));
                 Log.d("tansaku", "x:"+ String.valueOf(x)+" y:"+String.valueOf(y));
                 Log.d("tansaku", "x:"+ String.valueOf(po.getWidth())+" y:"+String.valueOf(po.getHeight()));
                 Log.d("tansaku", "x:"+ String.valueOf(percentX)+" y:"+String.valueOf(percentY));
@@ -67,6 +77,11 @@ public class TansakuActivity extends AppCompatActivity {
     }
 
     public void LoadImage(int num){
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        display_size = size.y;
+
         currentImage = num;
         currentView.setImageResource(R.drawable.ship_sample);
         left = Character.getNumericValue(Case_array[num].charAt(9))*10+Character.getNumericValue(Case_array[num].charAt(10));
