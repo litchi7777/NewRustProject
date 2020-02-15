@@ -25,7 +25,7 @@ public class TansakuActivity extends AppCompatActivity {
                 // something to do
                 break;
             case MotionEvent.ACTION_UP:
-                ImageView po = (ImageView) findViewById(R.id.imageView);
+                ImageView po = (ImageView) findViewById(R.id.imageView1);
                 int poleft = po.getLeft();
                 int potop = po.getTop();
                 int x= (int) motionEvent.getX();
