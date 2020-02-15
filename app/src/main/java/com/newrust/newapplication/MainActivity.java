@@ -21,8 +21,20 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, TansakuActivity.class);
                 startActivity(intent);
                 break;
+
         }
+
     }
 
+    public void onStoryButtonClick(View view){
+        switch (view.getId()){
+            case R.id.btnToStory:
+                Intent intent1 = new Intent(this, StoryActivity.class);
+                startActivity(intent1);
+                break;
+
+        }
+
+    }
 
 }
