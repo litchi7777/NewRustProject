@@ -15,7 +15,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     //アクティビティ遷移のテストのボタンです。
     //邪魔であれば消してください。
 
@@ -31,3 +30,4 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
+
