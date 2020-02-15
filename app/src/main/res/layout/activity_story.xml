@@ -33,7 +33,7 @@
         android:layout_height="200dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="250dp"
-        android:src="@drawable/people"
+        android:src="@drawable/chisaki"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,7 +43,7 @@
         android:layout_height="200dp"
         android:layout_marginStart="220dp"
         android:layout_marginTop="250dp"
-        android:src="@drawable/people"
+        android:src="@drawable/chisaki"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
