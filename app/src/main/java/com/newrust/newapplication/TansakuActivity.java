@@ -48,8 +48,6 @@ public class TansakuActivity extends AppCompatActivity {
     }
 
     public void LoadImage(int num){
-
-        Integer.parseInt();
     }
 
 
